@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="community.css" />
+    <title>Community</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <h4>Community</h4>
+      <form id="imageForm">
+        <div class="form-group">
+          <label for="caption"></label>
+          <textarea
+            class="form-control"
+            id="caption"
+            rows="3"
+            placeholder="Share your insights..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="image"></label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="image"
+            accept="image/*"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <h4>Posts</h4>
+      <div class="image-container" id="imageContainer"></div>
+    </div>
+
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+
+    <script src="community.js"></script>
+  </body>
+</html>
